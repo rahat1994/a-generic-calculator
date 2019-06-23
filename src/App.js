@@ -5,10 +5,7 @@ import Button from './components/button';
 
 class App extends Component {
   
-  state={
-    message:""
-  };
-
+  
   componentDidMount(){
       this.setState({
                     message:"Hello There"
@@ -27,25 +24,27 @@ class App extends Component {
             <Button number="7" />
             <Button number="8" />
             <Button number="9" />
-            <input className="button mathButtons" type="button" value="+" />
+            <Button number="+" />
+            
             <br/>
 
             <Button number="4" />
             <Button number="5" />
             <Button number="6" />
-            <input className="button mathButtons" type="button" value="-" />
+            <Button number="-" />
+            
             <br/>
 
             <Button number="1" />
             <Button number="2" />
             <Button number="3" />
-            <input className="button mathButtons" type="button" value="x" />
+            <Button number="x" />
             <br/>
 
             <input id="clearButton" className="button" type="button" value="C" />
-            <input className="button digits" type="button" value="0" />
-            <input className="button mathButtons" type="button" value="=" />
-            <input className="button mathButtons" type="button" value="/"/>
+            <Button number="0" />
+            <Button number="=" />
+            <Button number="/" />
           </form>
         </fieldset> 
       </div>
