@@ -5,6 +5,13 @@ import Button from './components/button';
 
 class App extends Component {
   
+  constructor(props) {
+    super(props);
+
+    this.state ={
+        display_val:"5"
+    };
+}
   
   componentDidMount(){
       this.setState({
@@ -19,7 +26,7 @@ class App extends Component {
         <fieldset id="container">
           <form name="calculator">
       
-            <input id="display" type="text" name="display" readOnly/>
+            <input id="display" type="text" name="display" value={this.state.display_val} readOnly/>
 
             <Button number="7" />
             <Button number="8" />

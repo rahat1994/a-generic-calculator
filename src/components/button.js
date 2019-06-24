@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
-import { isNull, isNumber } from 'util';
+import { isNumber } from 'util';
 
 export default class button extends Component {
 
     constructor(props) {
         super(props);
-  
+        
+        let class_name = "";
+        if (isNumber(this.props.number)){
+            class_name = "button digits";
+        }else{
+            class_name = "button mathButtons";
+        }
+
         this.state ={
-            class_name:''
+            class_name:class_name
         };
     }
     componentDidMount(){
@@ -16,13 +23,7 @@ export default class button extends Component {
     }
 
     render() {
-
-        if (isNumber(this.props.number)){
-            this.state.class_name = "button digits";
-        }else{
-            this.state.class_name = "button mathButtons";
-        }
-
+        
         return (
             <input className={this.state.class_name} type="button" value={this.props.number}/>
         )
