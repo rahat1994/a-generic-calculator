@@ -9,14 +9,12 @@ class App extends Component {
     super(props);
 
     this.state ={
-        display_val:"5"
+        display_val:"0"
     };
 }
   
   componentDidMount(){
-      this.setState({
-                    message:"Hello There"
-                  })
+      
   }
 
   render(){
@@ -28,30 +26,30 @@ class App extends Component {
       
             <input id="display" type="text" name="display" value={this.state.display_val} readOnly/>
 
-            <Button number="7" />
-            <Button number="8" />
-            <Button number="9" />
-            <Button number="+" />
+            <Button button_value="7" />
+            <Button button_value="8" />
+            <Button button_value="9" />
+            <Button button_value="+" />
             
             <br/>
 
-            <Button number="4" />
-            <Button number="5" />
-            <Button number="6" />
-            <Button number="-" />
+            <Button button_value="4" />
+            <Button button_value="5" />
+            <Button button_value="6" />
+            <Button button_value="-" />
             
             <br/>
 
-            <Button number="1" />
-            <Button number="2" />
-            <Button number="3" />
-            <Button number="x" />
+            <Button button_value="1" />
+            <Button button_value="2" />
+            <Button button_value="3" />
+            <Button button_value="x" />
             <br/>
 
             <input id="clearButton" className="button" type="button" value="C" />
-            <Button number="0" />
-            <Button number="=" />
-            <Button number="/" />
+            <Button button_value="0" />
+            <Button button_value="=" />
+            <Button button_value="/" />
           </form>
         </fieldset> 
       </div>
